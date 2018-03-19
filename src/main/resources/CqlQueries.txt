@@ -1,0 +1,7 @@
+CREATE KEYSPACE spark
+  WITH REPLICATION = {
+   'class' : 'SimpleStrategy',
+   'replication_factor' : 1
+  };
+
+CREATE TABLE spark.sentiments ( id UUID PRIMARY KEY, tweet text, sentiment text );
